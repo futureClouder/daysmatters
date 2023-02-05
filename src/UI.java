@@ -14,10 +14,12 @@ public class UI
        jFrame.add(jPanel);
        JButton button = new JButton("时间差模式");
        jPanel.add(button);
-       button.setMargin(new Insets(20,30,50,40));
+       button.setMargin(new Insets(10,15,20,25));
        
        JButton jButton = new JButton("倒计时模式");
        jPanel.add(jButton);
+       jButton.setMargin(new Insets(10,15,20,25));
+       
 
 
 

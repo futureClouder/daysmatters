@@ -77,6 +77,27 @@ public class Daysmatter
          String firstDate = sc.nextLine().trim();
          System.out.print("请输入第二个目标日期： ");
          String secondDate = sc.nextLine().trim();
+         while (firstDate.equals(secondDate))
+         {
+            System.out.println("");
+            System.out.println("起始日期和最终日期相同，请重新检查您的输入！");
+            System.out.println("");
+            try {
+               Thread.sleep(3000);
+            }
+            catch (InterruptedException e)
+            {
+               throw new RuntimeException(e);
+            }
+            System.out.print("请输入第一个目标日期： ");
+            firstDate = sc.nextLine().trim();
+            System.out.print("请输入第二个目标日期： ");
+            secondDate = sc.nextLine().trim();
+            if(!firstDate.equals(secondDate))
+            {
+               break;
+            }
+         }
          dateCalculator(firstDate,secondDate);
       }
       else if (Objects.equals(mode,"留学") || Objects.equals(mode,"回家")|| Objects.equals(mode,"回国"))
